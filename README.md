@@ -4,10 +4,24 @@ IDA Pro IDAPython Script to Demangle Swift
 
 ## HowTo
 
-1. Run SwiftDemang_1GetFuncs.py in IDA to generate the mangled functions list
-2. Run python SwiftDemang_2GenDemang.py file_mangled.txt to generate the demangled functions list.  
+1. From IDA run: 
+  ```
+  SwiftDemang_1GetFuncs.py 
+  ```
+  to generate the mangled functions list
+2. From the terminal run: 
+  ```
+  python SwiftDemang_2GenDemang.py file_mangled.txt 
+  ```
+  to generate the demangled functions list.  
   * This step requires the swift-demangle binary that is included in [XCode](https://swift.org/download/)
-3. Run SwiftDemang_3RenameFuncs.py in IDA to rename the functions
+  XCode 7.3.1 it's located in this location, which is where the script points to by default
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-demangle
+3. From IDA run:
+  ```
+  SwiftDemang_3RenameFuncs.py 
+  ```
+  to rename the functions
 
 ### Example
 ![example](https://raw.githubusercontent.com/tylerhalfpop/SwiftDemang/master/example.png)
